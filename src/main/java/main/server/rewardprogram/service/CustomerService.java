@@ -2,7 +2,7 @@ package main.server.rewardprogram.service;
 
 import lombok.RequiredArgsConstructor;
 import main.server.rewardprogram.exception.CustomerNotFoundException;
-import main.server.rewardprogram.model.CustomerEntity;
+import main.server.rewardprogram.model.entity.CustomerEntity;
 import main.server.rewardprogram.model.request.CustomerRequest;
 import main.server.rewardprogram.model.responce.CustomerResponse;
 import main.server.rewardprogram.repository.CustomerRepository;
@@ -44,7 +44,7 @@ public class CustomerService {
         return entity.getId();
     }
 
-    public void update(UUID uuid, CustomerRequest customerRequest) {
+    public boolean update(UUID uuid, CustomerRequest customerRequest) {
         CustomerEntity entity = customerRepository.findById(uuid).
                 orElseThrow(CustomerNotFoundException::new);
 
@@ -53,5 +53,7 @@ public class CustomerService {
         entity.setPhoneNumber(customerRequest.getPhoneNumber());
 
         customerRepository.save(entity);
+
+        return true;
     }
 }

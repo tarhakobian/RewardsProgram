@@ -1,4 +1,4 @@
-package main.server.rewardprogram.model;
+package main.server.rewardprogram.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,7 +13,6 @@ import java.util.UUID;
 @Setter
 @Entity
 @Table(name = "customers")
-@AllArgsConstructor
 @NoArgsConstructor
 public class CustomerEntity {
     @Id

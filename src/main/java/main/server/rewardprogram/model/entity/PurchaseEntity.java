@@ -1,10 +1,7 @@
-package main.server.rewardprogram.model;
+package main.server.rewardprogram.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -13,7 +10,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "purchase")
 @NoArgsConstructor
-@AllArgsConstructor
 public class PurchaseEntity {
 
     @Id

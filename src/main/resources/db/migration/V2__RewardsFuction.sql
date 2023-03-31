@@ -1,5 +1,6 @@
 CREATE FUNCTION calculate_rewards_points(purchase_amount bigint)
-    RETURNS INTEGER AS $$
+    RETURNS INTEGER AS
+$$
 DECLARE
     points INTEGER := 0;
 BEGIN
