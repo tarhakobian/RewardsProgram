@@ -1,0 +1,9 @@
+PUT http://localhost:8080/customer/11111111-1111-1111-1111-111111111111
+Content-Type: application/json
+
+{
+  "name": "Max",
+  "surname": "Doe",
+  "phoneNumber": "123-456-7890",
+  "numberOfPurchases": 3
+}

@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.UUID;
 
 @RestController
@@ -21,12 +22,12 @@ public class CustomerController {
     }
 
     @PostMapping("/customers")
-    public ResponseEntity<?> create(@RequestBody CustomerRequest request) {
+    public ResponseEntity<?> create(@Valid @RequestBody CustomerRequest request) {
         return ResponseEntity.ok(customerService.create(request));
     }
 
     @PutMapping("/customer/{uuid}")
-    public ResponseEntity<?> update(@PathVariable UUID uuid, @RequestBody CustomerRequest customerRequest) {
+    public ResponseEntity<?> update(@PathVariable UUID uuid, @Valid @RequestBody CustomerRequest customerRequest) {
         customerService.update(uuid, customerRequest);
         return new ResponseEntity<>(HttpStatusCode.valueOf(200));
     }

@@ -1,0 +1,7 @@
+POST http://localhost:8080/purchases
+Content-Type: application/json
+
+{
+  "customerID": "33333333-3333-3333-3333-333333333333",
+  "cost": 1500
+}

@@ -7,8 +7,6 @@ import main.server.rewardprogram.model.request.CustomerRequest;
 import main.server.rewardprogram.model.responce.CustomerResponse;
 import main.server.rewardprogram.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.UUID;
 
@@ -18,7 +16,7 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
 
 
-    public CustomerResponse get(@RequestParam UUID uuid) {
+    public CustomerResponse get(UUID uuid) {
         CustomerEntity entity = customerRepository.findById(uuid).orElseThrow(CustomerNotFoundException::new);
 
         CustomerResponse response = new CustomerResponse();
@@ -31,7 +29,7 @@ public class CustomerService {
         return response;
     }
 
-    public UUID create(@RequestBody CustomerRequest request) {
+    public UUID create(CustomerRequest request) {
         CustomerEntity entity = new CustomerEntity();
 
         entity.setId(UUID.randomUUID());

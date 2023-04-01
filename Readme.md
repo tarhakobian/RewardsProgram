@@ -27,12 +27,12 @@ Alternatively, you can set up the database manually by following these steps:
 
     Create a new PostgreSQL database.
     Update the database connection details in the application.yml file.
-    Run the Flyway migration to set up the database schema. The migration scripts are located in the src/main/resources/db/migration directory.
+    Run the Flyway migration to set up the database schema.
+    The migration scripts are located in the src/main/resources/db/migration directory.
 
 ## **Rewards Calculation**
 
-The rewards calculation feature is implemented in the RewardService class. In addition, there is a main method in the class that can be used to quickly check the
-functionality of the rewards calculation.
+The rewards calculation feature is implemented in the RewardService class.
 
 The rewards calculation feature uses a PostgreSQL function calculate_rewards_points to count the number of points for
 each purchase. The SQL script for the function is located in the src/main/resources/db/migration/V2__RewardsFunction.sql
@@ -44,6 +44,10 @@ and calculate rewards points for each customer.
 This application demonstrates how to implement simple CRUD operations and a rewards calculation feature in Java using
 PostgreSQL as the database. It also shows how to use Flyway for version controlling the database schema and JDBC
 templates to execute native SQL scripts. In addition, the included Docker Compose file makes it easy to quickly start a
-PostgreSQL container for testing or development purposes.The presentation will also include a live demo of the
-application, which will make it easier to understand the functionality and how the different parts of the project fit
-together.
+PostgreSQL container for testing or development purposes.
+To quickly call the APIs and test them, you can navigate to the request folder in the project directory.
+This folder contains .http files that you can use with a REST client like Postman or the REST client
+extension in Visual Studio Code. Simply open the desired .http file and use the Send Request button to
+make the API call. This can save you time and effort when testing the application's functionality.
+The presentation will also include a live demo of the application, which will make it easier to understand the
+functionality and how the different parts of the project fit together.
