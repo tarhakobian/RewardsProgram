@@ -46,8 +46,7 @@ PostgreSQL as the database. It also shows how to use Flyway for version controll
 templates to execute native SQL scripts. In addition, the included Docker Compose file makes it easy to quickly start a
 PostgreSQL container for testing or development purposes.
 To quickly call the APIs and test them, you can navigate to the request folder in the project directory.
-This folder contains .http files that you can use with a REST client like Postman or the REST client
-extension in Visual Studio Code. Simply open the desired .http file and use the Send Request button to
-make the API call. This can save you time and effort when testing the application's functionality.
+This folder contains .http files that you can use with a REST client like Postman. Simply open the desired .http file
+and use the Send Request button to make the API call. This can save you time and effort when testing the application's functionality.
 The presentation will also include a live demo of the application, which will make it easier to understand the
 functionality and how the different parts of the project fit together.
